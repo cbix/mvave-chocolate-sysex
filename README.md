@@ -1,6 +1,17 @@
 ## SysEx dumps
 
-The ultimate goal is to create an open source configuration tool, but one may already use these SysEx commands to change the basic controller mode.
+The ultimate goal is to create an open source configuration tool, but one may already use these SysEx commands to change the basic controller mode, e.g. using `aseqsend`:
+
+```
+~$ aseqsend -l
+ Port    Client name                      Port name
+ 40:0    SINCO                            SINCO MIDI 1
+129:0    FootCtrl                         FootCtrl Bluetooth
+~$ aseqsend -p 40:0 "F0 00 32 09 49 00 00 00 02 00 00 00 00 10 00 00 00 0B 5E 03 F7" # switch to "Program change C" mode
+~$ aseqsend -p 40:0 "F0 00 32 09 49 00 00 00 02 00 00 00 00 10 00 00 00 06 68 03 F7" # switch to "Manufacturer control" mode
+```
+
+(SysEx over BLE MIDI towards `129:0` didn't seem to work, maybe the commands are different)
 
 ### General messages
 
