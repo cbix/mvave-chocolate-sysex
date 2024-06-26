@@ -21,6 +21,20 @@ The ultimate goal is to create an open source configuration tool, but one may al
 F0 00 32 01 08 00 00 00 00 7F 01 F7
 ```
 
+### Discovery
+
+Request:
+
+```
+F0 00 32 45 00 00 00 40 7F F7
+```
+
+Response:
+
+```
+F0 00 32 45 58 01 00 00 23 6F 5E 51 1B 44 4E 1C 36 5F 60 4C 09 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 60 37 F7
+```
+
 ### Connecting and requesting current settings
 
 (TODO: screenshot of the resulting settings)
