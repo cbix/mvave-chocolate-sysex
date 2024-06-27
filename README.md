@@ -11,7 +11,10 @@ The ultimate goal is to create an open source configuration tool, but one may al
 ~$ aseqsend -p 40:0 "F0 00 32 09 49 00 00 00 02 00 00 00 00 10 00 00 00 06 68 03 F7" # switch to "Manufacturer control" mode
 ```
 
-(SysEx over BLE MIDI towards `129:0` didn't seem to work, maybe the commands are different)
+Observations:
+
+- configuration using aseqsend only worked while the official app is running and connected (runs under Wine), it seems the device only accepts SysEx within an enclosed USB Request Block
+- SysEx towards BLE MIDI didn't work, likely requires debugging the official Android app
 
 ### General messages
 
